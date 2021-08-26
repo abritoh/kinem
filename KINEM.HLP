@@ -1,0 +1,157 @@
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +									  +
+ +									  +
+ +    Bienvenido a Temas de Ayuda, para desplazar una Pantalla Presione   +
+ +                                                                        +
+ +    Av Pag, para Imprimir Ayuda Presione  F5, para volver al inicio -   +
+ +    ------                               ----                           +
+ +                                                                        +
+ +    presione Inicio o Esc para terminar.                                +
+ +             ------   ---                                               +
+ +                                   arce_brito@latinmail.com  Julio 2002 +
+ +									  +
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+		      T E M A S   D E   A Y U D A ... ?
+
+  A) ACERCA DE...
+  B) PRESENTACION...
+  C) PANTALLA PRINCIPAL...
+  D) MENU DE OPCIONES
+
+
+
+  A) ACERCA DE...
+  ---------------
+
+  Kinem [An lisis del movimiento parab¢lico] es un programa desarrollado
+  en el lenguaje de programaci¢n C Ver. 3.0, destinado hacia el  calculo
+  de un tiro parab¢lico  dados las condiciones iniciales Vo, áo, Ho...
+
+                 Desarrollado por:              Arcenio Brito Hernandez.
+                                          Estudiante II sem. FCQeI. UAEM.
+    
+  B) PRESENTACION...
+  ------------------
+
+  Bienvenido a KINEM ver 1.0, el proposito fundamental de este programa es
+  utilizar la capacidad de los ordenadores para analizar el problema del -
+  tiro parab¢lico de forma gr fica e intuitiva.
+
+  Al desarollar el presente programa se ha puesto atenci¢n en la familiari-
+  dad de muchos usuarios en ambiente windows, por lo que se utilizan aspec-
+  tos parecidos.
+
+  Se espera sea de utilidad para todo aquel interesado en el estudio     de
+  esta 'peque¤a' parte de de las ciencias f¡sicas y matem ticas...
+
+
+  C) PANTALLA PRINCIPAL...
+  ------------------------
+
+  Al iniciar el programa aparece una pantalla de PRESENTACION espere 10 seg.
+  o presione cualquier tecla para continuar.
+
+  Inmediatamente aparece la pantalla principal, un recuadro blanco y bajo -
+  ella un menu de 9 botones que se enlistan a continuaci¢n.
+
+
+  D) MENU DE OPCIONES
+  -------------------
+
+  -vo- Se activa al presionar 'v' [del teclado], luego aparece un cuadro de
+  dialogo donde debe insertar la velocidad inicial  entre [0-500] en m/s
+
+  -áo- Se activa al presionar 'b', luego aparece un cuadro de dialogo donde
+  debe escribir el  ngulo de lanzamiento entre [0.0001 - 90]ø
+
+  -Ho- Se activa al presionar 'H', aparece un cuadro de dialogo  donde debe
+  indicar la altura inicial de lanzamiento en m
+
+  -t(s)- Se activa al presionar 't', aparece un cuadro donde debe   indicar
+  el tiempo en seg. para el cual desea una descripcion del moviemiento  para
+  una descripci¢n mas completa ver opcion sig.
+
+
+  -Dat- Para accesar a esta  opcion  presione  la tecla 'd', inmediatamente
+  aparece un recuadro donde se describe el movimiento  para   el tiempo 't'
+  dado en la opci¢n -t(s)-
+
+  ** Presione la tecla '+' o '-' para observar la descripci¢n del movimiento
+     instantes antes o despues del tiempo -t(s)- por defecto se avanza o re-
+     trocede 1 seg. pero puede cambiar esta opcion [ver sig.]
+
+
+  ** Presione la tecla 'i' para variar el intervalo de tiempo  que  desea  -
+     cambiar cada vez que pulse '+' o '-',
+
+     Ejemplo:
+	    Indique el intervalo : 0.001
+				     
+				     ÀÄÄÄ  N£mero introducido por el usuario
+
+  ** Presione -Esc- para salir de esta opci¢n
+
+     Nota: Al accesar a esta opci¢n se borra todo lo que se encuentra en el -
+	    rea  agrafica
+
+
+  -Run- Se activa al presionar 'r'. Con esta opci¢n usted lanzara su proyectil
+  seg£n las opciones indicadas por los botones [1,2,3 y 7].
+
+   ** Presionando cualquier tecla detiene el movimiento del proyectil
+
+   ** Un signo '+' indica la posicion del proyectil cuando la altura es maxima
+
+   ** Un signo '*' indica que el proyectil ha llegado a la posici¢n  y = 0
+
+   ** En la esquina superior derecha aparece la descripci¢n del movimiento para
+      cada intervalo 't' de tiempo, establecido por el programa
+
+   ** En la esquina superior derecha se observa la escala de graficaci¢n
+
+      Ejemplo:
+	       Escala 10:1
+			
+			ÀÄÄÄ  Indica que una 'unidad' equivale a 10 metros
+
+	       donde la 'unidad' es un pixel (un punto de la pantalla)
+	       La escala es determinada automaticamente por el programa.
+
+
+  -Pausa- Se activa al presionar 'p', esta opci¢n despliega un cuadro donde --
+  deber  escribir en milesimas de segundo el retardo que tendr  el proyectil -
+  al moverse.
+
+  Ejemplo:
+	    Digite el valor de pausa ml: 1000
+					
+					ÀÄÄÄ 1000 ml = 1 seg.
+
+  Esta opci¢n retarda el movimiento la cantidad de milesimas de seg indicados
+  por el usuario
+
+  -Cls- Se activa presionando 'c', borra la pantalla
+
+  -F1-  Se activa presionando F1, presenta la ayuda del programa
+
+  -Exit- Presione Esc para salir del programa..
+
+
+			      E N D   O F  F I L E
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ .
+ .
+ .
+
+
+
+
+
+
+ ...
+ ...
+
+
