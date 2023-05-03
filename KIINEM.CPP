@@ -1,10 +1,10 @@
 
 /*------------------------------------------------------------------------
-NOMBRE............:       Programa de Tiro Parab¢lico: Modo gr†fico
+NOMBRE............:       Programa de Tiro Parab√≥lico: Modo gr√°fico
 VERSION...........:       1.0
 FECHA.............:       06/Julio/2002
-PROGRAMADO POR....:       Brito Hern†ndez Arcenio
-			  arce_brito@latinmail.com
+PROGRAMADO POR....:       ARBR
+			  
 ------------------------------------------------------------------------*/
 
 # include <alloc.h>       *
@@ -69,9 +69,9 @@ double Graficar(double, double, double, int, int, int, int);
 int    help();
 int    Imprimir(char *);
 
-/* Declaraci¢n de Botones */
+/* Declaraci¬¢n de Botones */
 char Texboton[MAXBOTON][MAXLONGBOTOM]
-     ={"  Vo  ","  ·o  ","  Ho  "," t(s) ","  Dat ",
+     ={"  Vo  ","  √°o  ","  Ho  "," t(s) ","  Dat ",
        "  Run ","pause ","  Cls ","  F1  "," Exit "};
 
 int assciTec[MAXBOTON]
@@ -105,7 +105,7 @@ void main()
    /*-----------------------------------------------------------------*/
 	       S_GWIN_XY
    A_GRAFICA   =
-   {INTERIOR,X1,Y1,X2,Y2,0,GRIS,AZUL,ROJO_C,"An†lisis del Movimiento Parab¢lico"},
+   {INTERIOR,X1,Y1,X2,Y2,0,GRIS,AZUL,ROJO_C,"An¬†lisis del Movimiento Parab¬¢lico"},
 
    B_TAREAS    =
    {INTERIOR,X1,Y2,X2,MAX_Y,1,GRIS,AZUL,AMARILLO,"Opciones"};
@@ -133,7 +133,7 @@ void main()
    do{
        TECLA = getche();
 
-    /* PULSA EL BOTON SI ES VµLIDO */
+    /* PULSA EL BOTON SI ES V¬µLIDO */
        pressboton(TECLA);
 
       switch(TECLA)
@@ -146,7 +146,7 @@ void main()
 
 	case ANGULO_0:
 	     copy_screen(170,190,470,290);   GWinCent(C_MENSAJES);
-	     Bo = readNum(180,240,ROJO,"Introduce un valor para ·o:");
+	     Bo = readNum(180,240,ROJO,"Introduce un valor para √°o:");
 	     putimage(170,190,buf,COPY_PUT);  free(buf);
 	break;
 
@@ -197,7 +197,7 @@ void main()
 
    }while(TECLA!=SCAPE);
 
-   closegraph(); // limpia el †rea y finaliza el modo gr†fico
+   closegraph(); // limpia el ¬†rea y finaliza el modo gr¬†fico
 }
 
 
@@ -240,8 +240,8 @@ double Graficar(double V, double B, double H, int time,int Xo,int Yo,int GRAFICA
        line(Xo, Yo, MAX_X, Yo);     // Eje X
        line(Xo, Y2, Xo, Yo);        // Eje Y
 
-       outtextxy(MAX_X+10, Yo-4, "x"); // T°tulo x
-       outtextxy(Xo-3    , 30  , "y"); // T°tulo y
+       outtextxy(MAX_X+10, Yo-4, "x"); // T¬°tulo x
+       outtextxy(Xo-3    , 30  , "y"); // T¬°tulo y
        outtextxy(Xo      , Yo+3, "o");
        outtextxy(MAX_X   , Yo-3, "");
        outtextxy(Xo-3    , 38  , "");
@@ -261,7 +261,7 @@ double Graficar(double V, double B, double H, int time,int Xo,int Yo,int GRAFICA
 	Vox    = V * COS_B;
 	Voy    = V * SEN_B;
 
-   /* CALCULO DE CONDICIONES MµXIMAS */
+   /* CALCULO DE CONDICIONES M¬µXIMAS */
 
       ALCANCE_X       = V*V*SEN_2B / (2.0*g)*(1+pow(1+2*g*H/(Voy*Voy),0.5) );
       TIEMPO_DE_VUELO = ALCANCE_X / Vox;
@@ -289,16 +289,16 @@ double Graficar(double V, double B, double H, int time,int Xo,int Yo,int GRAFICA
        Vy[p]   = Voy - g * t;
    }
 
-   setcolor(BLANCO);  outtextxy(30,30,"€€€€€€€€€€€€€€€€€€");
+   setcolor(BLANCO);  outtextxy(30,30,"√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ");
    sprintf(Tex,"Escala 1:%.2f",Escala);setcolor(ROJO_C);
    outtextxy(30,30,Tex);
 
    for(nn=0,n = 150; nn<=2; nn++, n = n + 20)
-   { setcolor(BLANCO);  outtextxy(490,n,"€€€€€€€€€€€€€€€€€€"); }
+   { setcolor(BLANCO);  outtextxy(490,n,"√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ"); }
 
    setcolor(ROJO);
    sprintf(Tex,"Vo [m/s] = %.3lf ",V);   outtextxy(490,150,Tex);
-   sprintf(Tex,"·o [ ¯ ] = %.3lf ",B);   outtextxy(490,170,Tex);
+   sprintf(Tex,"√°o [ √∏ ] = %.3lf ",B);   outtextxy(490,170,Tex);
    sprintf(Tex,"Ho [ m ] = %.3lf ",H);   outtextxy(490,190,Tex);
 
    /* GRAFICACION DEL TIRO PARABOLICO */
@@ -311,7 +311,7 @@ double Graficar(double V, double B, double H, int time,int Xo,int Yo,int GRAFICA
        putpixel(x_cord, y_cord ,GRAFICA_COLOR); delay(time*TIEMPO_MAS*10);
 
 	 for(nn=0,n = 50; nn<=4; nn++, n = n + 20)
-	 { setcolor(BLANCO);  outtextxy(490,n,"€€€€€€€€€€€€€€€€€€"); }
+	 { setcolor(BLANCO);  outtextxy(490,n,"√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ√õ"); }
 
 	 setcolor(AZUL_C);
 	 sprintf(Tex,"t  [ s ] = %.3lf ",Time[pp]); outtextxy(490,50,Tex);
@@ -349,8 +349,8 @@ void  datos(double V, double B, double H, double t)
 
    char TEC,Tex[80],msg_F[6][80];
    char *TITULOS_X[]={"Al inicio","Despues de t","En el Impacto"};
-   char *TITULOS_Y[]={"Posici¢n","Velocidad","En H es Max"};
-   char *TITULOS_dY[]={"Sx","Sy","S","Vx","Vy","·¯","V","t",""};
+   char *TITULOS_Y[]={"Posici¬¢n","Velocidad","En H es Max"};
+   char *TITULOS_dY[]={"Sx","Sy","S","Vx","Vy","√°√∏","V","t",""};
 
    double g = GRAVEDAD_SI,T[3], Vox, Voy, SEN_2B, SEN_B,COS_B,TAN_B,
 	  Sx[3],Sy[3],Sf[3],Vx[3],Vy[3],Vf[3],B_[3],TanB_[3],
@@ -360,7 +360,7 @@ void  datos(double V, double B, double H, double t)
    int x,y,i,j;
 
    S_GWIN_CENT  C_DATOS =
-   { EXTERIOR,600,350,1,AZUL_C,ROJO_C,BLANCO," An†lisis de datos " };
+   { EXTERIOR,600,350,1,AZUL_C,ROJO_C,BLANCO," An¬†lisis de datos " };
 
    do{
        GWinCent(C_DATOS); /* CREA LA VENTANA */
@@ -382,19 +382,19 @@ void  datos(double V, double B, double H, double t)
        }
        setcolor(AMARILLO);
 
-       /* COLOCA LOS T÷TULOS DE COLUMNA PRINCIPAL */
+       /* COLOCA LOS T√ñTULOS DE COLUMNA PRINCIPAL */
        for(i=0,j = Ini_x+50; i<=2; i++,j = j + 140)
        {
 	  outtextxy(j,Ini_y-35,TITULOS_X[i]);
        }
 
-       /* COLOCA LOS T÷TULOS DE LAS FILAS */
+       /* COLOCA LOS T√ñTULOS DE LAS FILAS */
        for(i=0,j = Ini_y+20; i<=2; i++,j = j + 80)
        {
 	 outtextxy(Ini_x-100,j,TITULOS_Y[i]);
        }
 
-       /* COLOCA LOS T÷TULOS EN PRIMERA COLUMNA */
+       /* COLOCA LOS T√ñTULOS EN PRIMERA COLUMNA */
        for(i=0,j = Ini_y+15; i<=8; i++,j = j + 25)
        {
 	 outtextxy(Ini_x+20,j,TITULOS_dY[i]);
@@ -408,7 +408,7 @@ void  datos(double V, double B, double H, double t)
 	Vox    = V * COS_B;
 	Voy = V * SEN_B;
 
-	/* CALCULO DE CONDICIONES MµXIMAS */
+	/* CALCULO DE CONDICIONES M¬µXIMAS */
 	ALCANCE_X       = V*V*SEN_2B / (2.0*g)*(1+pow(1+2*g*H/(Voy*Voy),0.5) );
 	TIEMPO_DE_VUELO = ALCANCE_X / Vox;
 	ALTURA_MAXIMA   = H + Voy * Voy / ( 2.0 * g );
@@ -452,7 +452,7 @@ void  datos(double V, double B, double H, double t)
 
 	 sprintf(Tex,"%.4lf",Vx[i]);    outtextxy(j,Ini_y+90,Tex);
 	 sprintf(Tex,"%.4lf",Vy[i]);    outtextxy(j,Ini_y+115,Tex);
-	 sprintf(Tex,"%.3lf¯",B_[i]);   outtextxy(j,Ini_y+140,Tex);
+	 sprintf(Tex,"%.3lf√∏",B_[i]);   outtextxy(j,Ini_y+140,Tex);
 	 sprintf(Tex,"%.4lf",Vf[i]);    outtextxy(j,Ini_y+165,Tex);
 
 	 outtextxy(j,Ini_y+190,msg_F[i]);
@@ -495,7 +495,7 @@ double readNum(int x,int y,int COLOR_NUM,char TEXTO[])
   do{
 
      do{
-	setcolor(BLANCO); outtextxy(x+i*8,y,"€€");
+	setcolor(BLANCO); outtextxy(x+i*8,y,"√õ√õ");
 	setcolor(COLOR_NUM);	TECLA  = getch();
 	AUXTEC = TECLA;  sprintf(sTECLA,"%c",AUXTEC);
 	outtextxy(x+i*8,y,sTECLA);
@@ -584,7 +584,7 @@ void Presenta(int nColorF)
 
   setcolor(AZUL);
   settextstyle(0,0,10);  outtextxy(10,20, "~~~~");
-  settextstyle(0,0,10);	 outtextxy(10,70," €€ ");
+  settextstyle(0,0,10);	 outtextxy(10,70," √õ√õ ");
 
   setcolor(BLANCO);
   settextstyle(1,0,6);   outtextxy(95 ,72,"UAEM");
@@ -593,7 +593,7 @@ void Presenta(int nColorF)
 
   setcolor(AZUL_C);
   settextstyle(0,0,2);
-  outtextxy(100,320,"   Brito Hern†ndez Arcenio  ");
+  outtextxy(100,320,"   Brito Hern¬†ndez Arcenio  ");
   outtextxy(100,350,"Ing. Victor Dominguez Flores");
 }
 
