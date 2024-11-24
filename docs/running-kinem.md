@@ -2,8 +2,8 @@
 
 1. KINEM.EXE was programmed and compiled in Turbo C 3.0 to run under the MS-DOS 16-bit operating system. Due to this, the EXE cannot run directly on modern 64-bit operating systems.
 2. However, you can use a DOS emulator like DOSBox to run KINEM.EXE.
-3. You can find the distributable version of KINEM and the necessary files to run the program in a ZIP file in this repository. The file is: **KINEM.zip**.
-4. Throughout this document, the nomenclature: `<Z:\command parameter>` indicates the execution of a command in the DOSBox emulator (**DOSBox.exe**).
+3. The distributable version of KINEM, along with all the necessary files to run the program, is available in this repository as a ZIP file named **KINEM.zip**.
+4. Throughout this document, the nomenclature: `<Z:\command parameter>` indicates a command that you are required to execute in the DOSBox emulator (**DOSBox.exe**).
 
 ## Installing and Setting-Up DOSBox Emulator
 
@@ -17,7 +17,7 @@
 
 ## Executing KINEM.EXE in DOSBox
 
-1. DOSBox's default drive letter is *Z:*. To run KINEM and any other DOS program, *mount* your local folder inside the DOSBox virtual environment by issuing: `<mount C C:\DOS>`.
+1. DOSBox's default drive letter is *Z*. To run KINEM and any other DOS program, *mount* your local folder inside the DOSBox virtual environment by issuing: `<mount C C:\DOS>`.
 2. If you dont find the keys for *: (colon)* and *\ (slash)* characters despite keyboard-layout configuration use the ASCII code: `<ALT+58 for : >` and `<ALT+92 for \ >`.
 3. Once the KINEM local folder is *mounted* in DOSBox, you can access it directly by issuing:
    1. `<C:\>` and pressing [ENTER].
@@ -25,7 +25,7 @@
    3. Finally, issue: `<KINEM.EXE>` [ENTER].
 4. KINEM.EXE will start as shown in the screenshots below.
 
-|
+
 ![DOS-BOX](../images/DOSBox.png "Using DOS-BOX to run KINEM.EXE")
 
 
@@ -34,7 +34,7 @@ ___
 
 ## KINEM Execution (Screenshots)
 
-|
+
 
 ![KINEM](../images/KINEM-1.png "KINEM.EXE")
 
@@ -69,8 +69,6 @@ ___
 ![KINEM](../images/KINEM-16.png "KINEM.EXE")
 
 ![KINEM](../images/KINEM-17.png "KINEM.EXE")
-
-
 
 
 
