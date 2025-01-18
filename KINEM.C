@@ -207,7 +207,7 @@ void copy_screen(int left, int top, int right, int bottom)
    {
       closegraph();
       printf("Error: Memoria insuficiente     \n"
-             "Presione una input_key para terminar \n");
+             "Presione una TECLA para terminar \n");
       getch();
       exit(1);
    }
@@ -250,7 +250,6 @@ double render_graphic(double V, double B, double H, int time, int Xo, int Yo, in
    outtextxy(Xo + 580, Yo + 10, "580");
 
 |  //-- compute components
-
    SEN_B = operacion(B, uSEN, GRAD);
    SEN_2B = operacion(2.0 * B, uSEN, GRAD);
    COS_B = operacion(B, uCOS, GRAD);
@@ -258,7 +257,6 @@ double render_graphic(double V, double B, double H, int time, int Xo, int Yo, in
    Voy = V * SEN_B;
 
    //-- comput max-conditions
-
    ALCANCE_X = V * V * SEN_2B / (2.0 * g) * (1 + pow(1 + 2 * g * H / (Voy * Voy), 0.5));
    TIEMPO_DE_VUELO = ALCANCE_X / Vox;
    ALTURA_MAXIMA = H + Voy * Voy / (2.0 * g);
@@ -279,7 +277,6 @@ double render_graphic(double V, double B, double H, int time, int Xo, int Yo, in
    if (TIEMPO_DE_VUELO <= 80) TIEMPO_MAS = 0.1;
 
    //-- calculate s,v for each time (t)
-
    for (t = 0.0, p = 0; t <= TIEMPO_DE_VUELO; t = t + TIEMPO_MAS, p++)
    {
       if (t + TIEMPO_MAS > TIEMPO_DE_VUELO) t = TIEMPO_DE_VUELO;
@@ -311,7 +308,6 @@ double render_graphic(double V, double B, double H, int time, int Xo, int Yo, in
    outtextxy(490, 190, Tex);
 
    //-- render parabolic motion
-
    CONTINUE = TRUE;
    cord_max_y = (-1) * ALTURA_MAXIMA / f_scale + ORIGIN_Y;
    while (pp < p && !kbhit())
@@ -467,7 +463,6 @@ void show_wnd_data_table (double V, double B, double H, double t)
       }
 
       //-- display results
-
       for (i = 0, j = INITIAL_X + 60; i <= 2; i++, j = j + 140)
       {
          if (i == 1)
@@ -731,7 +726,7 @@ int show_wnd_help()
 #define MSG_ERR_PRINT_FILE "Error, Imposible print_file\n       "
 #define MSG_ERR_ACCESING_PRINTER "Error al accesar a la Impresora\n "
 
-int print_file(char ArImp[])
+int print_file(char file_name[])
 {
    FILE *ip, *PRINT;
    char ch;
@@ -743,7 +738,7 @@ int print_file(char ArImp[])
       return (-1);
    }
 
-   if ((ip = fopen(ArImp, "rt")) == NULL)
+   if ((ip = fopen(file_name, "rt")) == NULL)
    {
       fprintf(stderr, MSG_ERR_PRINT_FILE);
       getch();
